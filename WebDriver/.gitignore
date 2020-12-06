@@ -1,16 +1,4 @@
 ##############################
-## For task
-##############################
-
-# Ignore any logs
-*.db
-*.log
-
-# Ignore any directory's
-target/*
-bin/*
-
-##############################
 ## Java
 ##############################
 .mtj.tmp/
@@ -45,3 +33,5 @@ out/
 *.iml
 *.ipr
 *.iws
+src/main/
+target/generated-test-sources/
