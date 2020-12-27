@@ -1,4 +1,4 @@
 package by.bsu.marchenko.test;
 
-public class GarfieldTest {
+public class SortingTests {
 }
