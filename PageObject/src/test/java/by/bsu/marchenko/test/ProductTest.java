@@ -29,6 +29,8 @@ public class ProductTest {
         driver = null;
     }
 
+    //-Denvironment=dev -Dbrowser=chrome
+
     @Test
     public void searchNonExistentProduct(){
         String expectedSearchResultText = "Товар не найден. Проверьте название или поищите товар в каталоге.";
