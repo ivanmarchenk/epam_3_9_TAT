@@ -1,16 +1,14 @@
 package by.bsu.marchenko.page;
 
 import by.bsu.marchenko.wait.UsedWait;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LandingPage extends AbstractPage {
-    private final Logger logger = LogManager.getRootLogger();
+public class LandingPage extends Page {
+    public static final int WAIT_TIME_SECONDS = 10;
     private String pageUrl;
 
     @FindBy(className = "bx-nav-1-lvl bx-nav-list-0-col")
@@ -24,18 +22,12 @@ public class LandingPage extends AbstractPage {
 
     public LandingPage(WebDriver driver){
         super(driver);
-        PageFactory.initElements(this.driver, this);
     }
 
     public LandingPage(WebDriver driver, String pageUrl){
         super(driver);
         this.pageUrl = pageUrl;
         PageFactory.initElements(this.driver, this);
-    }
-
-    public LandingPage buttonGoToActionClick(){
-        UsedWait.waitWebElement(driver, action).click();
-        return this;
     }
 
     public LandingPage insertTextInInputField(String text){
@@ -49,9 +41,7 @@ public class LandingPage extends AbstractPage {
     }
 
     @Override
-    public LandingPage openPage() {
-        driver.navigate().to(pageUrl);
-        logger.info("Landing page opened");
+    public LandingPage openPage(String url) {
         return this;
     }
 }

@@ -18,7 +18,7 @@ public class ItemsPage extends AbstractPage {
     @FindBy(xpath = "//div[@id='bx_117848907_109255_basket_actions']")
     private WebElement buttonAddItemToCart;
 
-    @FindBy(xpath = "//div[@class='top']//span[@class='top_korz']")
+    @FindBy(xpath = "//div[@class='basket_empty_container' and text()='Товар не добавлен, выберите ']")
     private WebElement cartField;
 
     public ItemsPage(WebDriver driver){
