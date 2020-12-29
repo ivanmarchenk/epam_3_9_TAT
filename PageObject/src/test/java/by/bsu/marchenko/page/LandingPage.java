@@ -29,12 +29,6 @@ public class LandingPage extends Page {
         PageFactory.initElements(this.driver, this);
     }
 
-    public LandingPage(WebDriver driver, String pageUrl){
-        super(driver);
-        this.pageUrl = pageUrl;
-        PageFactory.initElements(this.driver, this);
-    }
-
     public LandingPage insertTextInInputField(String text){
         UsedWait.waitWebElement(driver, inputField).sendKeys(Keys.chord(Keys.CONTROL, "a"),text);
         return this;

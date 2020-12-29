@@ -3,15 +3,12 @@ package by.bsu.marchenko.test;
 import by.bsu.marchenko.page.LandingPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ProductTest {
@@ -28,8 +25,6 @@ public class ProductTest {
         driver.quit();
         driver = null;
     }
-
-    //-Denvironment=dev -Dbrowser=chrome
 
     @Test
     public void searchNonExistentProduct(){
